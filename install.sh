@@ -47,5 +47,4 @@ if [ ! -f ~/.ssh/id_rsa ]; then
         ssh -o StrictHostKeyChecking=no root@$IP "pwd" < /dev/null
 fi
 
-curl -o inventory.download $SCRIPT_REPO/inventory.ini
-envsubst < inventory.download > inventory.ini
+envsubst < inventory.src > inventory.ini
